@@ -14,6 +14,7 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { StatusView } from "../components/StatusView";
 import { MostSearchedCategory } from "../components/MostSearchedCategory";
+import { TopDeals } from "../components/Deals";
 
 export default function HomePage() {
   const [showProfile, setShowProfile] = useState(false);
@@ -66,6 +67,9 @@ export default function HomePage() {
 
           <div>
             <MostSearchedCategory />
+          </div>
+          <div>
+            <TopDeals />
           </div>
           {/* <PromoCarousel />
           <PromoCarousel />

@@ -81,7 +81,7 @@ export function MostSearchedCategory() {
           {categories.map((category) => (
             <CarouselItem key={category.id} className="pl-2 md:pl-4 basis-auto">
               <button
-                className="flex items-center gap-2 px-6 py-3 bg-orange-100 rounded-full 
+                className="flex items-center gap-2 px-6 py-2 bg-orange-100 rounded-full 
                 hover:bg-orange-200 border border-orange-500  transition-colors duration-200"
               >
                 <span className="text-orange-500">{category.icon}</span>
