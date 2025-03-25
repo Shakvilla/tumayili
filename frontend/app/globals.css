@@ -291,3 +291,22 @@
   padding: 4px 8px;
   color: rgb(100 116 139);
 }
+
+/* For smoother progress bar transitions */
+.progress-bar-transition {
+  transition: width 10ms linear;
+}
+
+/* Prevent body scroll when story is open */
+.story-open {
+  overflow: hidden;
+}
+/* Smooth transitions for status viewer */
+.status-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Smooth progress bar animation */
+.progress-smooth {
+  transition: width 10ms linear;
+}

@@ -7,7 +7,7 @@ const TopNav = () => {
   return (
     <div>
       {" "}
-      <div className="sticky top-0 bg-gray-100 p-2 sm:p-3 md:p-4 z-20">
+      <div className="sticky top-0  p-2 sm:p-3 md:p-4 z-20">
         <div className="flex items-center justify-between gap-2">
           <Avatar className="w-12 h-12">
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
