@@ -7,6 +7,7 @@ interface Status {
   id: string;
   imageUrl: string;
   alt: string;
+  active?: boolean;
 }
 
 interface StatusViewProps {
@@ -21,30 +22,35 @@ const defaultStatuses: Status[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1608613304899-ea8098577e38?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Electronics repair service",
+    active: true,
   },
   {
     id: "2",
     imageUrl:
       "https://images.unsplash.com/photo-1613876215075-276fd62c89a4?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Auto mechanic service",
+    active: false,
   },
   {
     id: "3",
     imageUrl:
       "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Plumbing service",
+    active: true,
   },
   {
     id: "4",
     imageUrl:
       "https://images.unsplash.com/photo-1580256081112-e49377338b7f?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Electrical service",
+    active: false,
   },
   {
     id: "5",
     imageUrl:
       "https://images.unsplash.com/photo-1742268350468-345079a1081b?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Barber service",
+    active: false,
   },
 ];
 
@@ -62,7 +68,11 @@ export function StatusView({
             key={status.id}
             className="flex-shrink-0 relative cursor-pointer"
           >
-            <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-orange-500 p-0.5">
+            <div
+              className={`w-16 h-16 rounded-full overflow-hidden ring-2  p-0.5 ${
+                status?.active ? "ring-[#34cccd]" : "ring-0"
+              }`}
+            >
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
                   src={status.imageUrl}
