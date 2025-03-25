@@ -1,20 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import MapView from "../components/map-view";
-import SearchBar from "../components/search-bar";
-import ProfileView from "../components/profile-view";
+import MapView from "../artisans/components/map-view";
+import SearchBar from "./components/search-bar";
+import ProfileView from "./components/profile-view";
 import BottomNav from "../components/bottom-nav";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Bell } from "lucide-react";
-import PromoCarousel from "../components/promo-carousel";
-import Categories from "../components/Categories";
-import { TopArtisansAround } from "../components/TopArtisansAround";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { StatusView } from "../components/StatusView";
-import { MostSearchedCategory } from "../components/MostSearchedCategory";
-import { TopDeals } from "../components/Deals";
+import { StatusView } from "./components/StatusView";
+import PromoCarousel from "./components/promo-carousel";
+import Categories from "./components/Categories";
+import { TopArtisansAround } from "./components/TopArtisansAround";
+import { MostSearchedCategory } from "./components/MostSearchedCategory";
+import { TopDeals } from "./components/Deals";
 
 export default function HomePage() {
   const [showProfile, setShowProfile] = useState(false);

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import RepairTool from "../../images/gifs/repair-tools.gif";
-import Hammer from "../../images/gifs/hammer.gif";
-import Plumber from "../../images/gifs/plumbing.gif";
-import Makeup from "../../images/gifs/woman.gif";
-import Jeweler from "../../images/gifs/ring.gif";
-import Cleaning from "../../images/gifs/cleaning-tools.gif";
-import GymInstructor from "../../images/gifs/deadlift.gif";
-import Laborers from "../../images/gifs/laborers.gif";
+import RepairTool from "../../../images/gifs/repair-tools.gif";
+import Hammer from "../../../images/gifs/hammer.gif";
+import Plumber from "../../../images/gifs/plumbing.gif";
+import Makeup from "../../../images/gifs/woman.gif";
+import Jeweler from "../../../images/gifs/ring.gif";
+import Cleaning from "../../../images/gifs/cleaning-tools.gif";
+import GymInstructor from "../../../images/gifs/deadlift.gif";
+import Laborers from "../../../images/gifs/laborers.gif";
 import { ChevronRight } from "lucide-react";
 const Categories = () => {
   const categories = [

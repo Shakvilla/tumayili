@@ -9,8 +9,6 @@ import {
 } from "@/components/ui/carousel";
 import {
   Hammer,
-  Paintbrus,
-  Scissorsh,
   Lightbulb,
   Wrench,
   Wheat,

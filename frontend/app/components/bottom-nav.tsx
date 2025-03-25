@@ -1,17 +1,37 @@
 "use client";
 
-import { Home, Search, Clock, User, Plus } from "lucide-react";
+import { Home, Search, Clock, User, Plus, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 interface BottomNavProps {
   onProfileClick: () => void;
 }
 
 export default function BottomNav({ onProfileClick }: BottomNavProps) {
+  const router = useRouter();
   const navItems = [
-    { icon: Home, label: "Home", action: () => {} },
-    { icon: Search, label: "Discover", action: () => {} },
-    { icon: Clock, label: "Orders", action: () => {} },
+    {
+      icon: Home,
+      label: "Home",
+      action: () => {
+        router.push("/dashboard");
+      },
+    },
+    {
+      icon: MapPin,
+      label: "Artisans",
+      action: () => {
+        router.push("/artisans");
+      },
+    },
+    {
+      icon: Clock,
+      label: "Orders",
+      action: () => {
+        router.push("/dashboard");
+      },
+    },
     { icon: User, label: "Profile", action: onProfileClick },
   ];
 
