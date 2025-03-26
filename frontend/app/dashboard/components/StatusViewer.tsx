@@ -40,7 +40,7 @@ export function StatusViewer({
 
   // Handle story progression with improved timing
   useEffect(() => {
-    const duration = currentStory.media[currentMediaIndex].duration || 7; // Increased default duration to 7 seconds
+    const duration = currentStory?.media[currentMediaIndex]?.duration || 7; // Increased default duration to 7 seconds
     const interval = 10;
     const steps = (duration * 1000) / interval;
     let currentStep = 0;
@@ -55,10 +55,10 @@ export function StatusViewer({
 
         // Delay the transition to next story/media
         setTimeout(() => {
-          if (currentMediaIndex < currentStory.media.length - 1) {
+          if (currentMediaIndex < currentStory?.media?.length - 1) {
             setCurrentMediaIndex((prev) => prev + 1);
             setProgress(0);
-          } else if (currentStoryIndex < stories.length - 1) {
+          } else if (currentStoryIndex < stories?.length - 1) {
             setCurrentStoryIndex((prev) => prev + 1);
             setCurrentMediaIndex(0);
             setProgress(0);
@@ -74,8 +74,8 @@ export function StatusViewer({
   }, [
     currentMediaIndex,
     currentStoryIndex,
-    currentStory.media,
-    stories.length,
+    currentStory?.media,
+    stories?.length,
     onClose,
   ]);
 
@@ -91,13 +91,13 @@ export function StatusViewer({
         setProgress(0);
       } else if (currentStoryIndex > 0) {
         setCurrentStoryIndex((prev) => prev - 1);
-        setCurrentMediaIndex(stories[currentStoryIndex - 1].media.length - 1);
+        setCurrentMediaIndex(stories[currentStoryIndex - 1]?.media?.length - 1);
         setProgress(0);
       }
     }
     // Click on right third of screen - go forward
     else if (clickX > (screenWidth * 2) / 3) {
-      if (currentMediaIndex < currentStory.media.length - 1) {
+      if (currentMediaIndex < currentStory?.media?.length - 1) {
         setCurrentMediaIndex((prev) => prev + 1);
         setProgress(0);
       } else if (currentStoryIndex < stories.length - 1) {
@@ -164,15 +164,15 @@ export function StatusViewer({
             isTransitioning ? "opacity-50" : "opacity-100"
           )}
         >
-          {currentStory.media[currentMediaIndex].type === "image" ? (
+          {currentStory?.media[currentMediaIndex]?.type === "image" ? (
             <img
-              src={currentStory.media[currentMediaIndex].url}
+              src={currentStory?.media[currentMediaIndex]?.url}
               alt=""
               className="w-full h-full object-contain"
             />
           ) : (
             <video
-              src={currentStory.media[currentMediaIndex].url}
+              src={currentStory?.media[currentMediaIndex]?.url}
               autoPlay
               muted
               playsInline

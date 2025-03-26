@@ -30,9 +30,9 @@ export default function HomePage() {
         <TopNav />
         {/* Scrollable Content */}
         <div className="space-y-6 p-3">
-          <div className="my-2">
+          {/* <div className="my-2">
             <StatusView />
-          </div>
+          </div> */}
           <PromoCarousel />
 
           <Categories />
