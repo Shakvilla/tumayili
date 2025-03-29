@@ -67,8 +67,11 @@ const Categories = () => {
   return (
     <main>
       <div className="flex my-2 justify-between items-center">
-        <h1 className="text-base font-medium text-gray-600">Categories</h1>
-        <Link href="#" className="text-xs text-cyan-500 flex items-center">
+        <h1 className="text-base font-medium text-foreground">Categories</h1>
+        <Link
+          href="#"
+          className="text-xs text-muted-foreground flex items-center"
+        >
           See more
           <ChevronRight className="w-5 h-5" />
         </Link>
@@ -84,12 +87,14 @@ const Categories = () => {
               src={cat.icon}
               alt={cat.category}
               priority
-              width={80}
-              height={80}
-              className="p-2 flex items-center w-14 h-14 justify-center bg-white rounded-full "
+              width={60}
+              height={60}
+              className="p-2 flex items-center w-12 h-12 justify-center bg-background rounded-full "
             />
 
-            <span className="text-xs my-1 text-gray-600 ">{cat.category}</span>
+            <span className="text-xs my-1 text-foreground ">
+              {cat.category}
+            </span>
           </Link>
         ))}
       </div>

@@ -36,7 +36,7 @@ export default function BottomNav({ onProfileClick }: BottomNavProps) {
   ];
 
   return (
-    <div className="bg-white border-t border-border p-1 md:p-2 flex justify-around items-center relative">
+    <div className="bg-background border-t border-border p-1 md:p-2 flex justify-around items-center relative">
       {/* First half of nav items */}
       <div className="flex justify-around flex-1">
         {navItems.slice(0, 2).map((item, index) => (

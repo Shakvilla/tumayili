@@ -125,7 +125,7 @@ export function TopArtisansAround({
                       <Badge
                         key={category}
                         variant="secondary"
-                        className="bg-orange-500/80 text-white hover:bg-orange-600"
+                        className="bg-primary/80 text-white hover:bg-primary/10"
                       >
                         {category}
                       </Badge>

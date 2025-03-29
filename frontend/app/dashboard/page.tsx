@@ -21,7 +21,7 @@ export default function HomePage() {
   const [showProfile, setShowProfile] = useState(false);
 
   return (
-    <main className="relative h-screen flex flex-col bg-gray-100">
+    <main className="relative h-screen flex flex-col bg-gray-100 dark:bg-background">
       {/* Scrollable Content Area */}
       <div className="flex-1 overflow-y-auto pb-16">
         {" "}
@@ -35,7 +35,9 @@ export default function HomePage() {
           </div> */}
           <PromoCarousel />
 
-          <Categories />
+          <div className="my-1">
+            <Categories />
+          </div>
           <div className="my-2">
             <Separator />
           </div>

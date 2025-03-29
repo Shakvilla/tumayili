@@ -50,6 +50,7 @@ const defaultDeals: Deal[] = [
     priceUnit: "room",
     location: "Commandos",
     rating: 4.8,
+    isFavorite: true,
     image:
       "https://images.unsplash.com/photo-1611021061421-93741ec41ce1?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -109,7 +110,7 @@ export function TopDeals({
                 />
                 <button
                   onClick={() => onFavoriteClick?.(deal.id)}
-                  className="absolute top-2 right-2 p-1.5 bg-white/80 rounded-full hover:bg-white transition-colors"
+                  className="absolute top-2 right-2 p-1.5 bg-foreground/80 rounded-full hover:bg-white transition-colors"
                 >
                   <Heart
                     size={20}
@@ -125,21 +126,19 @@ export function TopDeals({
 
               <div className="flex-1 min-w-0">
                 <h3 className="text-lg font-semibold">{deal.title}</h3>
-                <p className="text-sm text-gray-600 line-clamp-2 mb-2">
-                  {deal.description}
-                </p>
+                <p className="text-sm  line-clamp-2 mb-2">{deal.description}</p>
 
-                <div className="inline-flex items-center px-3 py-1 bg-orange-500 rounded-full text-white text-sm">
+                <div className="inline-flex items-center px-3 py-1 bg-primary rounded-full text-sm text-blue-50">
                   <span>
                     GHC {deal.currentPrice}/{deal.priceUnit}
                   </span>
-                  <span className="ml-2 line-through text-gray-300">
+                  <span className="ml-2 line-through  text-blue-300">
                     GHC{deal.originalPrice}/{deal.priceUnit}
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between mt-2">
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-foreground">
                     <MapPin size={16} className="mr-1" />
                     <span className="text-sm">{deal.location}</span>
                   </div>
@@ -148,7 +147,7 @@ export function TopDeals({
                       size={16}
                       className="text-yellow-400 fill-yellow-400 mr-1"
                     />
-                    <span className="text-sm text-gray-600">
+                    <span className="text-sm text-foreground">
                       ({deal.rating})
                     </span>
                   </div>

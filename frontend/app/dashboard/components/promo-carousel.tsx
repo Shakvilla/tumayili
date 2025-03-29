@@ -71,21 +71,21 @@ export default function PromoCarousel() {
             <CarouselItem key={item.id}>
               <div className="relative overflow-hidden border-0 rounded-xl shadow-lg">
                 <div
-                  className="relative h-48 sm:h-56 md:h-64 lg:h-80 bg-cover bg-center p-4 sm:p-6 flex flex-col justify-between"
+                  className="relative h-40 sm:h-56 md:h-64 lg:h-80 bg-cover bg-center p-4 sm:p-6 flex flex-col justify-between"
                   style={{
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${item.image})`,
                   }}
                 >
                   {/* Promo Badge */}
                   <div className="absolute top-4 sm:top-4 left-0 sm:left-4">
-                    <div className="bg-orange-100 text-orange-500 font-semibold px-2 sm:px-4 py-1 sm:py-1 rounded-r-full text-xs sm:text-sm">
+                    <div className="bg-secondary text-primary font-semibold px-2 sm:px-4 py-1 sm:py-1 rounded-r-full text-xs sm:text-sm">
                       Promo
                     </div>
                   </div>
 
                   {/* Discount Badge */}
                   <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
-                    <div className="bg-orange-500 text-white font-bold p-2 sm:p-3 rounded-full flex flex-col items-center">
+                    <div className="bg-primary text-white font-bold p-2 sm:p-2 rounded-full flex flex-col items-center">
                       <span className="text-[10px] sm:text-xs">Up to</span>
                       <span className="text-base sm:text-xl">
                         {item.discount}
@@ -95,7 +95,7 @@ export default function PromoCarousel() {
 
                   {/* Main Content */}
                   <div className="mt-10 sm:mt-16">
-                    <h2 className="text-white text-base text-wrap md:text-2xl lg:text-3xl font-base leading-normal">
+                    <h2 className="text-white text-sm text-wrap md:text-2xl lg:text-3xl font-base leading-normal">
                       {item.title}
                     </h2>
                   </div>

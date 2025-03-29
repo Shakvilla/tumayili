@@ -10,11 +10,11 @@ export default function SearchBar() {
   const [searchValue, setSearchValue] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const recentSearches = [
-    { id: 1, name: "Woodworking", address: "Custom furniture, carvings" },
-    { id: 2, name: "Pottery", address: "Handmade ceramics, clay art" },
-    { id: 3, name: "Jewelry", address: "Custom metalwork, gemstones" },
-  ];
+  // const recentSearches = [
+  //   { id: 1, name: "Woodworking", address: "Custom furniture, carvings" },
+  //   { id: 2, name: "Pottery", address: "Handmade ceramics, clay art" },
+  //   { id: 3, name: "Jewelry", address: "Custom metalwork, gemstones" },
+  // ];
 
   const handleFocus = () => {
     setIsExpanded(true);
@@ -34,7 +34,7 @@ export default function SearchBar() {
         <Input
           type="text"
           placeholder="Find artisans or crafts"
-          className="px-10 py-5 md:py-8 text-sm md:text-base  rounded-md bg-white"
+          className="px-10 py-4 md:py-8 text-sm md:text-base  rounded-md bg-white"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           onFocus={handleFocus}
